@@ -11,8 +11,8 @@
 <meta property="og:site_name" content="PRAXIS">
 <meta property="og:locale" content="es_CO">
 <meta property="og:url" content="https://praxisconsultora.github.io/praxis/">
-<meta property="og:image" content="https://praxisconsultora.github.io/praxis/assets/praxis-compartir.png">
-<meta property="og:image:secure_url" content="https://praxisconsultora.github.io/praxis/assets/praxis-compartir.png">
+<meta property="og:image" content="https://praxisconsultora.github.io/praxis/praxis-compartir.png">
+<meta property="og:image:secure_url" content="https://praxisconsultora.github.io/praxis/praxis-compartir.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -20,14 +20,14 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="PRAXIS · Consultoría política">
 <meta name="twitter:description" content="Estrategia, datos, derecho y territorio para campañas y gobiernos territoriales.">
-<meta name="twitter:image" content="https://praxisconsultora.github.io/praxis/assets/praxis-compartir.png">
+<meta name="twitter:image" content="https://praxisconsultora.github.io/praxis/praxis-compartir.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 110'%3E%3Crect width='34' height='110' fill='%23C2F03A'/%3E%3Cpath d='M34 0H62A34 34 0 0 1 62 68H34Z' fill='%23FF6A1A'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/leaflet.css">
-<script src="assets/leaflet.js"></script>
+<link rel="stylesheet" href="leaflet.css">
+<script src="leaflet.js"></script>
 <style>
 :root{--navy:#121C3B;--navy2:#1E2B52;--navy3:#2A3A6B;--nar:#FF6A1A;--lim:#C2F03A;--off:#F5F3EE;--cel:#DDE3F0;--gris:#6F7BA0;--grisc:#B9C1D9;--ink:#121C3B;--r:14px}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -885,6 +885,30 @@ body.ax-solid nav.top{background:rgba(18,28,59,.96)!important;backdrop-filter:bl
 .ax-r3b{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .ax-tree .note{font-size:13px;color:#3B4668;margin-top:16px}
 @media(max-width:900px){.ax-labstrip,.ax-more,.ax-r3,.ax-r3b{grid-template-columns:1fr}.menu .ax-sub{position:static;display:block;background:transparent;box-shadow:none;padding:0 0 0 12px}.menu .ax-sub a{color:#D5DAEA}.ax-url{font-size:11.5px}}
+
+/* ===== celular: menú en una fila y Praxis Lab ordenado ===== */
+.menu .ax-m{display:none}
+@media(max-width:980px){
+ .menu .ax-dd{display:none}
+ .menu .ax-m{display:inline-block}
+ .menu{gap:18px}
+ .menu a{font-size:14.5px}
+}
+@media(max-width:900px){
+ .st-cards{display:none}
+ .st-bar{display:grid;grid-template-columns:repeat(12,1fr);gap:6px;overflow:visible;padding:12px}
+ .st-bar .lx-gl{display:block;grid-column:1/-1;text-align:left;margin:4px 0 0;font-size:9.5px}
+ .st-bar .lx-md{grid-column:span 4;min-width:0;padding:11px 4px;font-size:11.5px}
+ .st-bar .lx-mo{grid-column:span 3;min-width:0;padding:9px 2px;font-size:10.5px}
+ .st-bar .lx-lk{grid-column:span 6;min-width:0;flex-direction:row;justify-content:center;gap:6px;padding:10px 4px}
+ .st-main{padding:12px}
+ .st-box{padding:13px}
+ .lx-k4 b{font-size:21px}
+ .lx-tb{font-size:12px}
+ .lx-tb th,.lx-tb td{padding:6px 3px}
+ .lx-scn{font-size:12px}
+ .lx-act button{flex:1}
+}
 </style>
 </head>
 <body>
@@ -898,6 +922,7 @@ body.ax-solid nav.top{background:rgba(18,28,59,.96)!important;backdrop-filter:bl
   <button class="burger" aria-label="Menú" onclick="document.querySelector('.menu').classList.toggle('open')">≡</button>
   <div class="menu">
    <span class="ax-dd"><a data-go="ganar" href="#">Servicios</a><div class="ax-sub"><a data-go="ganar" href="#">Ganar<small>Para candidaturas</small></a><a data-go="gobernar" href="#">Gobernar<small>Para gobiernos territoriales</small></a><a data-go="transformar" href="#">Transformar<small>Resultados y rendición de cuentas</small></a></div></span>
+   <a class="ax-m" data-go="ganar" href="#">Ganar</a><a class="ax-m" data-go="gobernar" href="#">Gobernar</a><a class="ax-m" data-go="transformar" href="#">Transformar</a>
    <a data-go="lab" href="#">Praxis Lab</a>
    <a data-go="equipo" href="#">Equipo</a>
    <a data-go="metodologia" href="#">Metodología y cotización</a>
